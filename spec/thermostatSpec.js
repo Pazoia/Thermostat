@@ -16,4 +16,8 @@ describe('Thermostat', () => {
     expect(thermostat.temperature).toEqual(20);
   });
 
+  it('increases temperature with up function', () => {
+    thermostat.up()
+    expect(thermostat.temperature).toEqual(21);
+  });
 });
