@@ -5,6 +5,7 @@
 'use strict';
 
 function Thermostat() {
+  this.MAX_TEMP_POWER_SAVING_ON = 25;
   this.MINIMUM_TEMPERATURE = 10;
   this.temperature = 20;
 };
@@ -16,4 +17,9 @@ Thermostat.prototype.up = function () {
 Thermostat.prototype.down = function () {
   if (this.temperature > this.MINIMUM_TEMPERATURE)
     this.temperature --;
+};
+
+Thermostat.prototype.powerSavingOn = function () {
+  if (this.temperature < this.MAX_TEMP_POWER_SAVING_ON)
+    this.temperature ++;
 };
