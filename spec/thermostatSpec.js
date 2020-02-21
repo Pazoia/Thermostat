@@ -16,13 +16,19 @@ describe('Thermostat', () => {
     expect(thermostat.temperature).toEqual(20);
   });
 
-  it('increases temperature with up function', () => {
-    thermostat.up()
+  it('increases temp with up function', () => {
+    thermostat.up();
     expect(thermostat.temperature).toEqual(21);
   });
 
-  it('decreases temperature with down function', () => {
-    thermostat.down()
+  it('decreases temp with down function', () => {
+    thermostat.down();
     expect(thermostat.temperature).toEqual(19);
+  });
+
+  it('set minimum temp to 10', () => {
+    thermostat.temperature = 10;
+    thermostat.down();
+    expect(thermostat.temperature).toEqual(10);
   });
 });
